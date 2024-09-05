@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class valid {
+    public static void main(String[] args)
+    {
+        Scanner obj= new Scanner(System.in);
+        int age,rem;
+        System.out.println("enter age: ");
+        age=obj.nextInt();
+        if(age>=18)
+        {
+            System.out.println("valid for vote");
+        }
+        else
+        {
+            rem=18-age;
+            System.out.println("you have remaining "+rem+" for voting");
+        }
+    }
+}
