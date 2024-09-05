@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Sortnames {
+    public static void main(String[] args)
+    {
+        Scanner obj= new Scanner(System.in);
+        System.out.println("enter names: ");
+        String[] s=new String[5];
+        for(int i=0;i<5;i++)
+        {
+            s[i]=obj.nextLine();
+        }
+        for(int i=0;i<5-1;i++)
+        {
+            for(int j=0;j<5-i-1;j++)
+            {
+                if(s[j].compareTo(s[j+1])>0)
+                {
+                    String c=s[j];
+                    s[j]=s[j+1];
+                    s[j+1]=c;
+                }
+            }
+        }
+        System.out.println("sorted list: ");
+        for(int i=0;i<5;i++)
+        {
+            System.out.println(s[i]);
+        }
+    }
+}
