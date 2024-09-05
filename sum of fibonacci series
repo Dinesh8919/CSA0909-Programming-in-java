@@ -1,0 +1,23 @@
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10,sum=0; 
+        int firstTerm = 0;
+        int secondTerm = 1;
+        System.out.println("Fibonacci Series:");
+        for (int i = 1; i <= n; ++i) {
+            if (i == 1) {
+                System.out.print(firstTerm + ", ");
+            }
+            if (i == 2) {
+                System.out.print(secondTerm + ", ");
+            }
+            int nextTerm = firstTerm + secondTerm;
+            sum+=nextTerm;
+            System.out.print(nextTerm + ", ");
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+        System.out.println();
+        System.out.println("sum is "+sum);
+    }
+}
