@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Simpleinterest {
+    public static void main(String[] args)
+    {
+        int p,t,r,result;
+        Scanner obj= new Scanner(System.in);
+        System.out.println("enter principal amount: ");
+        p=obj.nextInt();
+        System.out.println("enter time: ");
+        t=obj.nextInt();
+        System.out.println("enter rate of interest: ");
+        r=obj.nextInt();
+        result=(p*t*r)/100;
+        System.out.println("simple interest= "+result);
+    }
+}
