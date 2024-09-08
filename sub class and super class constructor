@@ -1,0 +1,28 @@
+class SuperClass {
+    int number;
+    SuperClass(int number) {
+        this.number = number;
+        System.out.println("SuperClass constructor called with value: " + this.number);
+    }
+    public void display() {
+        System.out.println("SuperClass number: " + number);
+    }
+}
+class SubClass extends SuperClass {
+    int number; 
+    public SubClass(int superNumber, int subNumber) {
+        super(superNumber); 
+        this.number = subNumber;
+        System.out.println("SubClass constructor called with value: " + this.number);
+    }
+    public void display() {
+        super.display();
+        System.out.println("SubClass number: " + number);
+    }
+}
+public class MemberHidingExample {
+    public static void main(String[] args) {
+        SubClass obj = new SubClass(100, 200);
+        obj.display();
+    }
+}
